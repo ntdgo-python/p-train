@@ -14,7 +14,7 @@ Global:
   checkpoints:
   save_inference_dir:
   use_visualdl: false
-  infer_img: ./dataset/ocr_rec_ocst/images/00001_0101.jpg
+  infer_img: ./p-train/dataset/ocr_rec_ocst/images/00001_0101.jpg
   character_dict_path: ./configs/dict.txt
   max_text_length: &max_text_length 25
   infer_mode: false
@@ -76,10 +76,10 @@ Train:
   dataset:
     name: MultiScaleDataSet
     ds_width: false
-    data_dir: ./dataset/ocr_rec_ocst
+    data_dir: ./p-train/dataset/ocr_rec_ocst
     ext_op_transform_idx: 1
     label_file_list:
-    - ./dataset/ocr_rec_ocst/train.txt
+    - ./p-train/dataset/ocr_rec_ocst/train.txt
     transforms:
     - DecodeImage:
         img_mode: BGR
@@ -125,9 +125,9 @@ Train:
 Eval:
   dataset:
     name: SimpleDataSet
-    data_dir: ./dataset/ocr_rec_ocst
+    data_dir: ./p-train/dataset/ocr_rec_ocst
     label_file_list:
-    - ./dataset/ocr_rec_ocst/val.txt
+    - ./p-train/dataset/ocr_rec_ocst/val.txt
     transforms:
     - DecodeImage:
         img_mode: BGR
