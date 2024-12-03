@@ -26,6 +26,7 @@ python ./PaddleOCR/tools/train.py -c ./dataset/cls.yml
 # Training Recognizer Model
 python ./PaddleOCR/tools/train.py -c ./dataset/rec.yml
 python ./PaddleOCR/tools/train.py -c ./dataset/rec_new.yml
+python ./PaddleOCR/tools/train.py -c ./dataset/rec_hgnet.yml
 
 # Conversion of Detection Trained Weights to Inference
 python ./PaddleOCR/tools/export_model.py -c ./dataset/det.yml -o Global.pretrained_model="./output/det_ppocr_v4/best_accuracy" Global.save_inference_dir=./inference/det_inference/
